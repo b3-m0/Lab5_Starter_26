@@ -1,12 +1,12 @@
 // matches valid phone numbers
 export function isPhoneNumber(phoneNumber) {
-  const phoneRegex = /((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/;
+  const phoneRegex = /((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}/; // match 456- or (456) or nothing for area code
   return phoneRegex.test(phoneNumber);
 }
 
 // matches valid emails
 export function isEmail(email) {
-  const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+  const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; // word + @ + domain + . + 2-3 letter extension
   return emailRegex.test(email);
 }
 
@@ -27,6 +27,6 @@ export function isDate(date) {
 
 // Matches valid 3 or 6 character hex codes used for HTML or CSS.
 export function isHexColor(color) {
-  const colorRegex = /^\#?[A-Fa-f0-9]{3}([A-Fa-f0-9]{3})?$/;
+  const colorRegex = /^\#?[A-Fa-f0-9]{3}([A-Fa-f0-9]{3})?$/; // optional # + 0-9 or a-f or A-F + 3 more hex colors (optional)
   return colorRegex.test(color);
 }
